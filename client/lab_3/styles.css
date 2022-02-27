@@ -156,18 +156,23 @@ a:hover:visited{
       background-color: #F09A9D; /* Red */
     }
 
+    .page {
+        display: flex;
+        flex-wrap: wrap;
+    }
+      
     .header2 {
         width: 100%;
-        height: 100%;
+        height: 700px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
     }
 
     .photo-grid-container,
     .photo-grid,
     .photo-grid-item {
-        width: 50%;
+        width: 33.3%;
     }
 }
   
