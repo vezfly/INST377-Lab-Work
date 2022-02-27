@@ -181,6 +181,10 @@ a:hover:visited{
   
 /* Tablet Styles */
 @media only screen and (max-width: 1170px) {
+    .header1 {
+        padding:20px;
+    }
+
     body {
       background-color: white;/* Yellow */
     }
