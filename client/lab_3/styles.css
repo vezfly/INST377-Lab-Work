@@ -185,7 +185,7 @@ a:hover:visited{
       background-color: white;/* Yellow */
     }
     .menu-container {
-        padding: 40px 0;
+        padding: 35px 0;
     }
 
       .page {
@@ -207,7 +207,7 @@ a:hover:visited{
       }
 
       .footer-item {
-        height:400px;
+        height:300px;
     }
       
 }
@@ -215,7 +215,7 @@ a:hover:visited{
 /* Desktop Styles 
 @media only screen and (min-width: 961px) {
     body {
-      background-color: #B2D6FF; /* Blue *//*
+      background-color: #B2D6FF; /* Blue 
     }
 }
 */
