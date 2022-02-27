@@ -169,10 +169,12 @@ a:hover:visited{
         align-items: center;
     }
 
+    .first-item
+    .last-item,
     .photo-grid-container,
     .photo-grid,
     .photo-grid-item {
-        width: 33.3%;
+        width: 50%;
     }
 }
   
@@ -181,6 +183,24 @@ a:hover:visited{
     body {
       background-color: #F5CF8E; /* Yellow */
     }
+      .page {
+          display: flex;
+          flex-wrap: wrap;
+      }
+        
+      .header2 {
+          width: 100%;
+          height: 700px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+  
+      .photo-grid-container,
+      .photo-grid,
+      .photo-grid-item {
+          width: 33.3%;
+      }
 }
   
 /* Desktop Styles */
