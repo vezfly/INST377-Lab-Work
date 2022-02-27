@@ -153,7 +153,7 @@ a:hover:visited{
 /* Mobile Styles 
 @media only screen and (max-width: 400px) {
     body {
-      background-color: #F09A9D; /* Red 
+      background-color: #F09A9D; /* Red *//*
     }
 
     .page {
@@ -180,10 +180,14 @@ a:hover:visited{
 */
   
 /* Tablet Styles */
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 700px) {
     body {
       background-color: #F5CF8E; /* Yellow */
     }
+    .menu-container {
+        padding: 40px 0;
+    }
+
       .page {
           display: flex;
           flex-wrap: wrap;
@@ -191,22 +195,27 @@ a:hover:visited{
         
       .header2 {
           display: flex;
+          height: 500px;
           width: 100%;
           justify-content: center;
           align-items: center;
       }
       
-      
       .photo-grid,
       .photo-grid-item {
           width: 50%;
       }
+
+      .footer-item {
+        height:400px;
+    }
+      
 }
   
-/* Desktop Styles */
+/* Desktop Styles 
 @media only screen and (min-width: 961px) {
     body {
-      background-color: #B2D6FF; /* Blue */
+      background-color: #B2D6FF; /* Blue *//*
     }
 }
-  
+*/
