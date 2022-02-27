@@ -114,10 +114,11 @@
 
 a{
     color:white;
+    text-decoration: none;
 }
 
 a:hover {
-    color: blue;
+    color: rgb(1, 1, 214);
 }
 
 a:active{
