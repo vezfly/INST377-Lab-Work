@@ -142,10 +142,6 @@ nav a {
   margin: 10px 30px;
 }
 
-.section_4:hover {
-  background-color: blue;
-}
-
 .section_4 div.text{
   display: block;
   border-radius: 4px;
@@ -177,6 +173,7 @@ nav a {
 
 .grid img {
   width: 100px;
+<<<<<<< HEAD
 }
 
 .go{
@@ -185,3 +182,6 @@ nav a {
   color: black;
 }
 
+=======
+}
+>>>>>>> c2ebb02c022319d0c99ab4be015637226b8d23c6
