@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+/*document.addEventListener('DOMContentLoaded', () => {*/
     let slidePosition = 0;
     const slides = document.getElementsByClassName('carousel_item');
     const totalSlides = slides.length;
@@ -44,4 +44,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             updateSlidePosition();
         }
-}        
+/*}   */     

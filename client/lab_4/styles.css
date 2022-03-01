@@ -197,6 +197,15 @@ a:hover:visited{
     margin-right: 20px;
 }
 
+.carousel_actions button#carousel_button--prev:focus {
+    background-color: orange;
+    /*(other styles here)*/
+}
+
+.carousel_actions button#carousel_button--next:focus {
+    background-color: orange;
+    /*(other styles here)*/
+}
 
 @keyframes fadeVisibility {
     0% {
