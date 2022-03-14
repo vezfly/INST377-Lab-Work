@@ -8,18 +8,39 @@
     <body>
         <div class="container">
             <div>
-                <h1 div class="wrapper">Victoria Holmes Lab 5</h1>
+                <h1 div class="wrapper">Victoria Holmes' Lab 5</h1>
             </div>
+            <form action='' method='get' class='speaker-form'>
             <div class="columns">
-                <div class="ind">First Name<br>
-                    <p>form</p><br>
-                    Last Name<br>
-                    <p>form</p><br>
-                    <p>Veggie or Vegan?</p></br>
-                    <a>Yes o, No o</a><br>
+                <div class="ind">
+                    <div class='form-row'>
+                        <label for='full-name'>First Name</label>
+                        <input id='full-name' name='full-name' type='text'/>
+                      </div>
+                    <div class='form-row'>
+                      <label for='full-name'>Last Name</label>
+                      <input id='full-name' name='full-name' type='text'/>
+                    </div>
+
+                    <fieldset class='legacy-form-row'>
+                        <legend>Veggie or Vegan?</legend>
+                        <input id='diet-type-1'
+                               name='diet-type'
+                               type='radio'
+                               value='yes' />
+                        <label for='diet-type-1' class='radio-label'>Yes</label>
+                        <input id='diet-type-2'
+                               name='diet-type'
+                               type='radio'
+                               value='no'
+                               checked />
+                        <label for='diet-type-2' class='radio-label'>No</label>
+                      </fieldset>
+                      
                     <button>Submit</button>
                 </div>
-                <div class="ind">This is going to be something in two weeks.</div>
+                <div class="ind ind-2">This is going to be something in two weeks.</div>
             </div>
+            </form>
         </div>
     </body>
