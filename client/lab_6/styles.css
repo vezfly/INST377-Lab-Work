@@ -9,7 +9,7 @@
     padding: 0;
     font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
       ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
-    background-color: darkslategray;
+    background-color: rgb(255, 126, 197);
     font-family: "Helvetica", "Arial", sans-serif;
     font-size: 16px;
     color: rgb(73, 73, 73);
@@ -28,13 +28,13 @@
   
   .wrapper {
     display: flex;
-    background-color: rgb(255, 230, 148);
+    background-color: rgb(255, 219, 102);
     flex-direction: column;
     /*align-items: center;*/
     margin: 30px;
     padding: 15px;
     flex:1;
-    border: 1px solid #ffce64;
+    border: 1px solid #ffba27;
     border-radius: 3px;
   }
   
@@ -47,12 +47,12 @@
   }
   
   .ind{
-    background-color: white;
+    background-color: rgb(255, 222, 115);
     padding: 20px;
     display: flex;
     flex-direction: column;
-    
-    border: 1px solid #D6D9DC;
+
+    border: 1px solid #ffc23d;
     border-radius: 3px;
     
     
@@ -69,7 +69,7 @@
   
   button{
     padding:10px;
-    background-color: rgb(0, 192, 102);
+    background-color: rgb(192, 0, 106);
     flex:initial;
     color:white;
     border:0;
