@@ -17,14 +17,6 @@
   }
   
   /* Page Layout */
-  .columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: space-between;
-    margin: 20px 20px 20px 20px;
-    
-  }
   
   .wrapper {
     display: flex;
@@ -46,9 +38,17 @@
     
   }
   
+  .columns {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: space-around;
+    align-items: space-between;
+    margin: 20px 20px 20px 20px;
+    
+  }
+
   .ind{
     background-color: rgb(255, 222, 115);
-    padding: 20px;
     display: flex;
     flex-direction: column;
 
@@ -56,15 +56,16 @@
     border-radius: 3px;
     
     
-    margin: 40px 0;
-    padding: 30px;
+    
+    padding: 25px 25px 25px 25px;
   }
   
   .ind-2{
     display: flex;
     height:fit-content;
-    justify-content: center;
-    align-self: center;
+    /*justify-content: center;
+    align-self: center;*/
+    width: 700px;
   }
   
   button{
@@ -74,7 +75,7 @@
     color:white;
     border:0;
     border-radius:3px;
-    max-width: 50%;
+    max-width: 100%;
       
       
   }
@@ -85,6 +86,7 @@
     justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
+    width:250px;
   }
   
   .form-row input[type='text'] {
@@ -103,16 +105,19 @@
   .legacy-form-row {
     border: none;
     margin-bottom: 40px;
+    
   }
   
   .legacy-form-row legend {
     margin-bottom: 15px;
+    
   }
   
   .legacy-form-row .radio-label {
     display: block;
     font-size: 14px;
     padding: 0 20px 0 10px;
+    
   }
   
   .legacy-form-row input[type='radio'] {
