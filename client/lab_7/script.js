@@ -1,44 +1,68 @@
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min);
+function restoArrayMake(dataArray) {
+  console.log('fired dataHandler');
+  const range = [...Array(15).keys()];
+  const listItems = range.map((item, index) => {
+    const restNum = getRandomIntInclusive(0, dataArray.length - 1);
+    return dataArray[restNum];
+  });
+
+  return listItems;
+}
+
+function createHtmlList(collection) {
+  const targetList = document.querySelector('.resto-list');
+  //targetList = document.querySelector('.resto-list');
+  targetList.innerHTML = '';
+  collection.forEach((item) => {
+    const {name} = item;
+    const displayName = name.toLowerCase();
+    const injectThisItem = `<li>${displayName}</li>`;
+    targetList.innerHTML += injectThisItem;
+  });
+}
+
+async function mainEvent() {
+  console.log('script loaded');
+  const form = document.querySelector('.main_form');
+  const submit = document.querySelector('button');
+
+  const resto = document.querySelector('.restaurant-name');
+  const zipcode = document.querySelector('.food-type');
+  submit.style.display = 'none';
+
+  const { format } = require("express/lib/response");
+
+  const results = await fetch('/api/foodServicesPG');
+  const arrayFromJson = await results.json();
+
+  
+
+  if (arrayFromJson.data.length > 0) {
+    submit.style.display = 'block';
+
+    let currentArray = [];
+    resto.addEventListener('input', async (event) => {
+      console.log(event.target.value);
+      
+      if (currentArray.length < 1) {
+        return;
+      }
+
+      //const selectResto = arrayFromJson.data.filter((item) => {
+      const selectResto = currentArray.filter((item) => item.name.includes(event.target.value));
+        /*const lowerName = item.name.toLowerCase();
+        const lowerValue = event.target.value.toLowerCase();
+        return lowerName.includes(lowerValue);*/
+      });
+
+      console.log(selectResto);
+      createHtmlList(selectResto);
+    };
+
+    form.addEventListener('submit', async (submitEvent) => {
+      submitEvent.preventDefault();
+      currentArray = restoArrayMake(arrayFromJson.data);
+      console.log(currentArray);
+      createHtmlList(currentArray);
+    });
   }
-  
-  function dataHandler(array) {
-    const listItems = document.querySelector('#resto-list');
-    listItems.innerHTML = ""
-    let newArray = [...Array(15).keys()]
-    let arrayMap = newArray.map((elm) => { 
-      randomInt =  getRandomIntInclusive(0,array.length)
-      return array[randomInt]
-    })
-  
-    arrayMap.forEach((elm) => {
-      const str = `<li>${elm.name}</li>`
-      listItems.innerHTML +=str
-    })
-  
-  }
-  
-  async function mainEvent() { // the async keyword means we can make API requests
-    const form = document.querySelector('.main_form');
-    const button = document.querySelector('button');
-    button.style.display = 'none';
-    const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
-    const arrayFromJson = await results.json(); // This changes it into data we can use - an object
-  
-      if(arrayFromJson.data.length > 0){
-        button.style.display = 'block'
-  
-        form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
-          submitEvent.preventDefault(); // This prevents your page from refreshing!
-          console.log('form submission'); // this is substituting for a "breakpoint"
-  
-          dataHandler(arrayFromJson.data)
-        });
-    }
-  }
-  
-  // this actually runs first! It's calling the function above
-  document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
-  
