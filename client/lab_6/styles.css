@@ -76,10 +76,12 @@
     border:0;
     border-radius:3px;
     max-width: 100%;
-      
-      
   }
-  
+
+  button:hover {
+    background-color: hotpink;
+  }
+
   .form-row {
     margin-bottom: 40px;
     display: flex;
