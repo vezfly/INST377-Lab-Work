@@ -30,7 +30,7 @@ async function mainEvent() {
   const zipcode = document.querySelector('.food-type');
   submit.style.display = 'none';
 
-  const { format } = require("express/lib/response");
+  /*const { format } = require("express/lib/response");*/
 
   const results = await fetch('/api/foodServicesPG');
   const arrayFromJson = await results.json();
@@ -66,3 +66,6 @@ async function mainEvent() {
       createHtmlList(currentArray);
     });
   }
+
+  // this actually runs first! It's calling the function above
+document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
